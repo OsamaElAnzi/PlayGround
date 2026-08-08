@@ -71,7 +71,7 @@ export default function App() {
         </TouchableOpacity>
         </View>
         //row 3 SECTION MAPS
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 10 }}>
           <TouchableOpacity
             style={styles.SectionContainer}
             onPress={() => console.log('TouchableOpacity pressed')}
