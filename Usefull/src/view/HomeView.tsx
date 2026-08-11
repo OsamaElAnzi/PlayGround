@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   CategoryContainer: {
     backgroundColor: '#ECFAFA',
-    padding: 15,
+    padding: 13,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
