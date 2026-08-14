@@ -3,7 +3,7 @@ import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useState } from 'react';
 import {View, Text, StyleSheet, SafeAreaView, TouchableOpacity, useColorScheme, TextInput, Alert} from 'react-native';
-
+import { rows, operators, specialButtonsOthers, calculate } from '../components/CalculatorLogic/calculateLogic';
 
 export default function CalculatorView() {
     const [value, setValue] = useState<number>(0);
@@ -12,15 +12,6 @@ export default function CalculatorView() {
     const [previousValue, setPreviousValue] = useState<number | null>(null);
     const isDarkMode = useColorScheme() === 'dark';
 
-    const rows = [
-        ['<', 'AC', '%', '/'],
-        ['7', '8', '9', 'x'],
-        ['4', '5', '6', '-'],
-        ['1', '2', '3', '+'],
-        ['+/-', '0', ',', '='],
-    ];
-    const operators = ['/', 'x', '+', '=', '-'];
-    const specialButtonsOthers = ['<', 'AC', '%'];
 
     const handleButtonPress = (button: string | number) => {
         let newInput = [...currentInput];
@@ -51,7 +42,7 @@ export default function CalculatorView() {
                 setOperator(null);
                 setCurrentInput([]);
             }
-        }else if (button === ',') {
+        } else if (button === ',') {
             if (!newInput.includes(',')) {
                 newInput.push(',');
                 setCurrentInput(newInput);
@@ -63,26 +54,9 @@ export default function CalculatorView() {
         }
 
     };
-    function calculate(a: number, b: number, operator: string | null): number {
-        switch (operator) {
-            case '+':
-                return a + b;
-            case '-':
-                return a - b;
-            case 'x':
-                return a * b;
-            case '/':
-                if (b === 0) {
-                    Alert.alert('Error', 'Cannot divide by zero');
-                    return 0;
-                }
-                return a / b;
-            default:
-                return b;
-        }
-    }
     return (
-        <View style={{flex: 1, backgroundColor: isDarkMode ? '#226666' : '#93D1D1', padding: 20}}>
+        <View style={{flex: 1, backgroundColor: isDarkMode ? '#000000' : '#ffffff', padding: 20}}>
+            <Text style={styles.sectionTitle}>Calculator View</Text>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <View style={styles.CategoryContainer}>
                     <Text style={styles.CalculatorInput} >{value}</Text>
@@ -114,8 +88,8 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 24,
         fontWeight: '600',
-        color: '#226666',
-        paddingTop: 20,
+        color: '#0000000',
+        paddingBottom: 20,
     },
     CategoryContainer: {
         backgroundColor: '#000000',

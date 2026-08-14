@@ -13,24 +13,47 @@ const RootStack = createNativeStackNavigator({
   screens: {
     Home: {
       screen: HomeView,
+      options: {
+        headerShown: false,
+      },
     },
     Calculator: {
       screen: CalculatorView,
+      options: {
+        headerShown: false,
+      },
     },
     Agenda: {
       screen: AgendaView,
+      options: {
+        headerShown: false,
+      },
     },
     Clock: {
       screen: ClockView,
+      options: {
+        headerShown: false,
+        theme: 'dark',
+
+      },
     },
     GPS: {
       screen: GPSView,
+      options: {
+        headerShown: false,
+      },
     },
     Notes: {
       screen: NotesView,
+      options: {
+        headerShown: false,
+      },
     },
     Tasks: {
       screen: TasksView,
+      options: {
+        headerShown: false,
+      },
     },
   },
 });

@@ -5,16 +5,9 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 export default function ClockView() {
     const isDarkMode = useColorScheme() === 'dark';
     return (
-        <View style={{flex: 1, backgroundColor: isDarkMode ? '#226666' : '#93D1D1', padding: 20}}>
-            <Text style={styles.sectionTitle}>Clock View</Text>
+        <View style={{flex: 1, backgroundColor: isDarkMode ? '#000000' : '#ffffff', padding: 20}}>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <TouchableOpacity
-                    onPress={() => console.log('TouchableOpacity pressed')}
-                >
-                    <View style={styles.CategoryContainer}>
-                        <Icon name="clock" size={48} color="#226666"/>
-                    </View>
-                </TouchableOpacity>
+                
             </View>
         </View>
     );  
@@ -24,13 +17,11 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 24,
         fontWeight: '600',
-        color: '#226666',
-        paddingTop: 20,
+        color: '#ffffff',
+        flex: 1
     },
     CategoryContainer: {
-        backgroundColor: '#93D1D1',
+        backgroundColor: '#000000',
         borderRadius: 10,
-        padding: 20,
-        marginBottom: 20,
     },
 });

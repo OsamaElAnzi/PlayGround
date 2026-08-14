@@ -11,14 +11,14 @@ export default function HomeView() {
   const isDarkMode = useColorScheme() === 'dark';
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   return (
-    <View style={{ flex: 1, backgroundColor: isDarkMode ? '#226666' : '#93D1D1', padding: 20 }}>
+    <View style={{ flex: 1, backgroundColor: isDarkMode ? '#000000' : '#ffffff', padding: 20 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         //Botton 1 on row 1
         <TouchableOpacity
           onPress={() => navigation.navigate('Calculator')}
         >
           <View style={styles.CategoryContainer}>
-            <Icon name="calculator" size={48} color="#226666" />
+            <Icon name="calculator" size={48} color="#ffffff" />
           </View>
         </TouchableOpacity>
         //Botton 2 on row 1
@@ -26,7 +26,7 @@ export default function HomeView() {
           onPress={() => navigation.navigate('Agenda')}
         >
           <View style={styles.CategoryContainer}>
-            <Icon name="calendar" size={48} color="#226666" />
+            <Icon name="calendar" size={48} color="#ffffff" />
           </View>
         </TouchableOpacity>
         //Botton 3 on row 1
@@ -34,7 +34,7 @@ export default function HomeView() {
           onPress={() => navigation.navigate('Tasks')}
         >
           <View style={styles.CategoryContainer}>
-            <Icon name="tasks" size={48} color="#226666" />
+            <Icon name="tasks" size={48} color="#ffffff" />
           </View>
         </TouchableOpacity>
         //Botton 4 on row 1
@@ -42,7 +42,7 @@ export default function HomeView() {
           onPress={() => navigation.navigate('Clock')}
         >
           <View style={styles.CategoryContainer}>
-            <Icon name="clock" size={48} color="#226666" />
+            <Icon name="clock" size={48} color="#ffffff" />
           </View>
         </TouchableOpacity>
         </View>
@@ -55,7 +55,7 @@ export default function HomeView() {
           onPress={() => navigation.navigate('Notes')}
         >
           <View>
-            <MaterialIcons name="notes" size={48} color="#226666" />
+            <MaterialIcons name="notes" size={48} color="#ffffff" />
           </View>
         </TouchableOpacity>
         </View>
@@ -66,7 +66,7 @@ export default function HomeView() {
             onPress={() => navigation.navigate('GPS')}
           >
             <View>
-              <MaterialIcons name="map" size={48} color="#226666" />
+              <MaterialIcons name="map" size={48} color="#ffff" />
             </View>
           </TouchableOpacity>
         </View>
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   CategoryContainer: {
-    backgroundColor: '#ECFAFA',
+    backgroundColor: '#000000',
     padding: 13,
     borderRadius: 8,
     alignItems: 'center',
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   SectionContainer: {
-    backgroundColor: '#ECFAFA',
+    backgroundColor: '#000000',
     padding: 15,
     borderRadius: 8,
     marginHorizontal: 10,
