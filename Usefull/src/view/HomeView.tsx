@@ -17,56 +17,56 @@ export default function HomeView() {
         <TouchableOpacity
           onPress={() => navigation.navigate('Calculator')}
         >
-          <View style={styles.CategoryContainer}>
-            <Icon name="calculator" size={48} color="#ffffff" />
+          <View style={isDarkMode ? styles.CategoryContainerDark : styles.CategoryContainer}>
+            <Icon name="calculator" size={48} color={isDarkMode ? '#000000' : '#ffffff'} />
           </View>
         </TouchableOpacity>
         //Botton 2 on row 1
         <TouchableOpacity
           onPress={() => navigation.navigate('Agenda')}
         >
-          <View style={styles.CategoryContainer}>
-            <Icon name="calendar" size={48} color="#ffffff" />
+          <View style={isDarkMode ? styles.CategoryContainerDark : styles.CategoryContainer}>
+            <Icon name="calendar" size={48} color={isDarkMode ? '#000000' : '#ffffff'} />
           </View>
         </TouchableOpacity>
         //Botton 3 on row 1
         <TouchableOpacity
           onPress={() => navigation.navigate('Tasks')}
         >
-          <View style={styles.CategoryContainer}>
-            <Icon name="tasks" size={48} color="#ffffff" />
+          <View style={isDarkMode ? styles.CategoryContainerDark : styles.CategoryContainer}>
+            <Icon name="tasks" size={48} color={isDarkMode ? '#000000' : '#ffffff'} />
           </View>
         </TouchableOpacity>
         //Botton 4 on row 1
         <TouchableOpacity
           onPress={() => navigation.navigate('Clock')}
         >
-          <View style={styles.CategoryContainer}>
-            <Icon name="clock" size={48} color="#ffffff" />
+          <View style={isDarkMode ? styles.CategoryContainerDark : styles.CategoryContainer}>
+            <Icon name="clock" size={48} color={isDarkMode ? '#000000' : '#ffffff'} />
           </View>
         </TouchableOpacity>
         </View>
         //Welcome text
-        <Text style={styles.sectionTitle}>WELCOME TO USEFULL APP!</Text>
+        <Text style={isDarkMode ? styles.sectionTitleDark : styles.sectionTitle}>WELCOME TO USEFULL APP!</Text>
         //row 2 SECTION NOTES
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         <TouchableOpacity
-          style={styles.SectionContainer}
+          style={isDarkMode ? styles.SectionContainerDark : styles.SectionContainer}
           onPress={() => navigation.navigate('Notes')}
         >
           <View>
-            <MaterialIcons name="notes" size={48} color="#ffffff" />
+            <MaterialIcons name="notes" size={48} color={isDarkMode ? '#000000' : '#ffffff'}/>
           </View>
         </TouchableOpacity>
         </View>
         //row 3 SECTION MAPS
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingTop: 10 }}>
           <TouchableOpacity
-            style={styles.SectionContainer}
+            style={isDarkMode ? styles.SectionContainerDark : styles.SectionContainer}
             onPress={() => navigation.navigate('GPS')}
           >
             <View>
-              <MaterialIcons name="map" size={48} color="#ffff" />
+              <MaterialIcons name="map" size={48} color={isDarkMode ? '#000000' : '#ffffff'} />
             </View>
           </TouchableOpacity>
         </View>
@@ -82,6 +82,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: 20,
   },
+  sectionTitleDark: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: '#fff',
+    textAlign: 'center',
+    marginVertical: 20,
+  },
   CategoryContainer: {
     backgroundColor: '#000000',
     padding: 13,
@@ -91,8 +98,25 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 10,
   },
+  CategoryContainerDark: {
+    backgroundColor: '#ffffff',
+    padding: 13,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: 10,
+    marginVertical: 10,
+  },
   SectionContainer: {
     backgroundColor: '#000000',
+    padding: 15,
+    borderRadius: 8,
+    marginHorizontal: 10,
+    width: '95%',
+    height: 100,
+  },
+  SectionContainerDark: {
+    backgroundColor: '#ffffff',
     padding: 15,
     borderRadius: 8,
     marginHorizontal: 10,
