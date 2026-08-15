@@ -17,16 +17,28 @@ export default function ClockView() {
     }, []);
     return (
         <View style={{flex: 1,backgroundColor: isDarkMode ? '#000000' : '#ffffff'}}>
-            <Text style={styles.sectionTitle}>{time.toLocaleTimeString()}</Text>
+            <Text style={isDarkMode ? styles.sectionTitleDark :styles.sectionTitle}>{time.toLocaleTimeString()}</Text>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     sectionTitle: {
-        top: 150,
-        fontSize: 120,
-        color: '#000000',
+        top: 320,
+        right: 150,
+        fontSize: 170,
+        fontWeight: '400',
+        color: '#00000',
         transform: [{rotate: '90deg'}],
+        width: 730
     },
+    sectionTitleDark: {
+        top: 320,
+        right: 150,
+        fontSize: 170,
+        fontWeight: '400',
+        color: '#ffffff',
+        transform: [{rotate: '90deg'}],
+        width: 730
+    }
 });
