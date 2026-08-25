@@ -1,21 +1,22 @@
 import {View, Text, StyleSheet, SafeAreaView, TouchableOpacity, useColorScheme} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { Calendar } from "react-native-calendar-ui";
 
 export default function AgendaView() {
     const isDarkMode = useColorScheme() === 'dark';
     return (
-        <View style={{flex: 1, backgroundColor: isDarkMode ? '#226666' : '#93D1D1', padding: 20}}>
-            <Text style={styles.sectionTitle}>Agenda View</Text>
-            <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <TouchableOpacity
-                    onPress={() => console.log('TouchableOpacity pressed')}
-                >
-                    <View style={styles.CategoryContainer}>
-                        <Icon name="calendar" size={48} color="#226666"/>
-                    </View>
-                </TouchableOpacity>
-            </View>
+        <View style={{flex: 1, backgroundColor: isDarkMode ? '#000000' : '#ffffff', padding: 20}}>
+            <Calendar
+                onDateSelect={(date) => console.log("Selected:", date)}
+                style={{
+                    
+                }}
+                colors={{
+                    primary: "#0000000",
+                    selectedText: "#FFFFFF",
+                }}
+                />
         </View>
     );  
 }
