@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     },
     sectionTitleDark: {
         top: 320,
-        right: 150,
+        right: 155,
         fontSize: 170,
         fontWeight: '400',
         color: '#ffffff',
